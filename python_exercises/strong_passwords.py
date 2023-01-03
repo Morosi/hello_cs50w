@@ -7,7 +7,7 @@ def Password():
     lower_case = "abcdefghijklmnopqrstuvwxyz"
     upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     number = "0123456789"
-    symbol = "!@#$%^&*()_+|\?~`"
+    symbol = "!@#$%^&*()_+-=[]{}/<>;:|\?~`"
 
     user_for = lower_case + upper_case + number + symbol
 
@@ -17,4 +17,4 @@ def Password():
 
 while 5 < 7:
     Password()
-    time.sleep(1)
+    time.sleep(2)
