@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>
+        Exercise3_forms
+    </title>
+    <style> 
+       .dropdown{
+        display: inline-block;
+        color: black;
+        font-size: 16px;
+        border: none;
+        background-color: white;
+
+       }
+       .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       .dropdown-content a{
+        color: black;
+        font-size: 16px;
+        text-decoration: none;
+        display: block;
+       }
+       .dropdown-content a:hover{
+        background-color: #ddd;
+       }
+       /* show the options when the button is clicked */
+       .show{
+        display:block;
+       }
+    </style>
+    <body>
+        <div class="div1">  
+            <h1>Travel Reservation Form</h1>
+            <h3>* denotes mandatory</h3>
+        </div>
+        <div class="div2">
+            <form>
+                <label for="fullname">*Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br>
+            </form>
+            <form>
+                <label for="email">*Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+            </form>
+        </div>
+        <button class="dropdown">GOA</button>
+        <ul class="dropdown-content">
+            <li><a href="#">Gauteng</a></li>
+            <li><a href="#">Limpopo</a></li>
+            <li><a href="#">Kwazulu Natal</a></li>
+        </ul>
+
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++){
+                dropdown[i].addEventListener("click", function(){
+                    this.classlist.toggle("show")
+                });
+            }
+        </script>
+
+            </div>
+        </div>
+    </body>
+</html>
